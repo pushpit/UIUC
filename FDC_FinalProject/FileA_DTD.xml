@@ -1,0 +1,30 @@
+<!DOCTYPE consumerComplaints [
+        <!ELEMENT consumerComplaints (complaint)+>
+        <!ELEMENT complaint (event|product|issue|company|submitted|response|consumerNarrative)+>
+        <!ATTLIST complaint
+                id CDATA #REQUIRED>
+        <!ELEMENT event (#PCDATA)>
+        <!ATTLIST event
+                date CDATA #REQUIRED
+                type CDATA #REQUIRED>
+        <!ELEMENT product (productType|subproduct)+>
+        <!ELEMENT productType (#PCDATA)>
+        <!ELEMENT subproduct (#PCDATA)>
+        <!ELEMENT issue (issueType|subissue)+>
+        <!ELEMENT issueType (#PCDATA)>
+        <!ELEMENT company (companyName|companyState|companyZip)+>
+        <!ELEMENT companyName (#PCDATA)>
+        <!ELEMENT companyState (#PCDATA)>
+        <!ELEMENT companyZip (#PCDATA)>
+        <!ELEMENT submitted (#PCDATA)>
+        <!ATTLIST submitted
+                via CDATA #REQUIRED>
+        <!ELEMENT response (responseType|publicResponse)*>
+        <!ATTLIST response
+                consumerDisputed CDATA #REQUIRED
+                timely CDATA #REQUIRED>
+        <!ELEMENT responseType (#PCDATA)>
+        <!ELEMENT consumerNarrative (#PCDATA)>
+        <!ELEMENT publicResponse (#PCDATA)>
+        <!ELEMENT subissue (#PCDATA)>
+        ]>
